@@ -4,6 +4,8 @@
   --color-accent: #ff3400;
   --color-headings: #1b0760;
   --color-body: #918ca4;
+  --color-border: #ccc;
+  --border-radius: 30px;
 }
 *,
 *::before,
@@ -220,8 +222,8 @@ a {
 
 /* Inputs */
 .input {
-  border-radius: 30px;
-  border: 2px solid #ccc;
+  border-radius: var(--border-radius);
+  border: 2px solid var(--color-border);
   color: var(--color-headings);
   font-size: 2rem;
   outline: 0;
@@ -232,6 +234,31 @@ a {
   color: #cbcbd7;
 }
 
+.input-group {
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  display: flex;
+}
+
+.input-group input {
+  border: 0;
+  flex-grow: 1;
+  padding: 1rem 1.5rem;
+  overflow: auto;
+}
+
+.input-group .btn {
+  margin: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.input-group .icon-container {
+  background: none;
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+}
 @media screen and (min-width: 1024px) {
   .input {
     font-size: 1rem;
